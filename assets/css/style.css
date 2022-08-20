@@ -8,6 +8,12 @@
 .card{
   margin-top: 20px;
 }
+.logo img{
+  width: 100px;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 7px;
+}
 /* Loader 1 */
 .loader1,
 .loader1:before,
