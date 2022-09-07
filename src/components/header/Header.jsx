@@ -21,7 +21,7 @@ const Header = () => {
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a
-                className="nav-link active"
+                className="nav-link border bg-warning text-dark px-5 rounded "
                 aria-current="page"
                 href="https://code.wapborhan.com"
               >
