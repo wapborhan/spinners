@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import Source from "./Source";
 
 const SpinItem = (props) => {
   const item = props.data;
+
   return (
     <div className="col-md-3">
       <div className="card">
@@ -15,7 +19,16 @@ const SpinItem = (props) => {
             Source Code
           </button>
         </div>
-        {/* <div className="s">{source}</div> */}
+        <Modal show={props.show} onHide={props.handleClose} size="lg">
+          <Modal.Header closeButton>
+            <Modal.Title>Source Code</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div className="s">
+              <Source data={props.data} spinner={props.selectedSpinner} />
+            </div>
+          </Modal.Body>
+        </Modal>
       </div>
     </div>
   );

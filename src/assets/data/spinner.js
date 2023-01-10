@@ -3,7 +3,7 @@ const DATA = [
     id: 0,
     name: "Spinner 1",
     class: "loader1",
-    code: ``,
+    code: `Code Here`,
   },
   {
     id: 1,

@@ -8,6 +8,7 @@ class Spinner extends Component {
     super(props);
     this.state = {
       spinnerData: DATA,
+      show: false,
       selectedSpinner: null,
     };
   }
@@ -18,10 +19,14 @@ class Spinner extends Component {
 
     this.setState({
       selectedSpinner: upspin,
+      show: true,
     });
   };
+  handleClose = () => {
+    this.setState({ show: false });
+  };
   render() {
-    console.log(this.state.selectedSpinner);
+    // console.log(this.state.selectedSpinner);
     // const source = <Source spin={this.state.selectedspinner} />;
     return (
       <div className="pbd-5j">
@@ -31,8 +36,11 @@ class Spinner extends Component {
               return (
                 <SpinItem
                   data={item}
+                  selectedSpinner={this.state.selectedSpinner}
                   key={item.id}
-                  selecSpin={this.selectedSpinnerHandler}
+                  selecSpin={() => this.selectedSpinnerHandler(item.id)}
+                  show={this.state.show}
+                  handleClose={this.handleClose}
                 />
               );
             })}
